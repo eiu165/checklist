@@ -89,6 +89,7 @@
     <Compile Include="DemoElementApi.cs" />
     <Compile Include="DemoCameraApi.cs" />
     <Compile Include="DemoAddRemove.cs" />
+    <Compile Include="UI\Camera.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -96,5 +97,8 @@
       <Project>{3FFBFFF8-5560-4EDE-82E5-3FFDFBBA8A50}</Project>
       <Name>MonoTouch.Dialog</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\" />
   </ItemGroup>
 </Project>

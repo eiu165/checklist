@@ -16,5 +16,26 @@ namespace Hello_MultiScreen_iPhone
 
 		[Outlet]
 		MonoTouch.UIKit.UIButton btnHelloUniverse { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton btnCamera { get; set; }
+		
+		void ReleaseDesignerOutlets ()
+		{
+			if (btnHelloWorld != null) {
+				btnHelloWorld.Dispose ();
+				btnHelloWorld = null;
+			}
+
+			if (btnHelloUniverse != null) {
+				btnHelloUniverse.Dispose ();
+				btnHelloUniverse = null;
+			}
+
+			if (btnCamera != null) {
+				btnCamera.Dispose ();
+				btnCamera = null;
+			}
+		}
 	}
 }
