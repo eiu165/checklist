@@ -87,6 +87,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="DemoElementApi.cs" />
+    <Compile Include="DemoCameraApi.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
