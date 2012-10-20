@@ -81,9 +81,20 @@ namespace Hello_MultiScreen_iPhone
 						
 					case 1:
 						// Camera.
-						imagePicker.SourceType = UIImagePickerControllerSourceType.Camera;
-						imagePicker.AllowsEditing = false;
-						this.PresentModalViewController(imagePicker, true);
+						bool isAvailable = UIImagePickerController.IsCameraDeviceAvailable (UIImagePickerControllerCameraDevice.Front);
+						if (isAvailable)
+						{
+							imagePicker.SourceType = UIImagePickerControllerSourceType.Camera;
+							imagePicker.AllowsEditing = false;
+							this.PresentModalViewController(imagePicker, true);
+						}
+						else
+						{
+							using(var alert = new UIAlertView("Title", "this device has No Camera", null, "OK", null)) 
+							{
+									alert.Show();  
+							}
+						}
 						break;
 						
 					default:
