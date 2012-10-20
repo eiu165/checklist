@@ -36,3 +36,17 @@ Dialog/.DS_Store
 Dialog/MonoTouch.Dialog.userprefs
 
 Hello_MultiScreen_iPhone/.DS_Store
+
+Hello_MultiScreen_iPhone/bin/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone
+
+*.exe
+
+*.mdb
+
+*.plist
+
+Hello_MultiScreen_iPhone/bin/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone.exe
+
+Hello_MultiScreen_iPhone/bin/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.app/Hello_MultiScreen_iPhone.exe.mdb
+
+Hello_MultiScreen_iPhone/bin/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.app/Info.plist

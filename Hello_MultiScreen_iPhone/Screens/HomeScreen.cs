@@ -12,6 +12,7 @@ namespace Hello_MultiScreen_iPhone
 		HelloUniverseScreen helloUniverseScreen; 
 		CameraScreen cameraScreen;
 		NotifyScreen notifyScreen;
+		MailScreen mailScreen;
 		AccelerometerScreen accelerometerScreen;
 
 
@@ -51,6 +52,10 @@ namespace Hello_MultiScreen_iPhone
 			this.btnAccelerometer.TouchUpInside += (sender, e) => {
 				if(this.accelerometerScreen == null) { this.accelerometerScreen = new AccelerometerScreen(); }
 				this.NavigationController.PushViewController(this.accelerometerScreen, true);
+			};
+			this.btnMail.TouchUpInside += (sender, e) => {
+				if(this.mailScreen == null) { this.mailScreen = new MailScreen(); }
+				this.NavigationController.PushViewController(this.mailScreen, true);
 			};
 			
 

@@ -11,8 +11,15 @@ namespace Hello_MultiScreen_iPhone
 	[Register ("MailScreen")]
 	partial class MailScreen
 	{
+		[Outlet]
+		MonoTouch.UIKit.UIButton btnSend { get; set; }
+		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnSend != null) {
+				btnSend.Dispose ();
+				btnSend = null;
+			}
 		}
 	}
 }
