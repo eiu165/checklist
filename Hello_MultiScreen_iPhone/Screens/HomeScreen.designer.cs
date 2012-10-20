@@ -22,6 +22,9 @@ namespace Hello_MultiScreen_iPhone
 
 		[Outlet]
 		MonoTouch.UIKit.UIButton btnNotify { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton btnAccelerometer { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -43,6 +46,11 @@ namespace Hello_MultiScreen_iPhone
 			if (btnNotify != null) {
 				btnNotify.Dispose ();
 				btnNotify = null;
+			}
+
+			if (btnAccelerometer != null) {
+				btnAccelerometer.Dispose ();
+				btnAccelerometer = null;
 			}
 		}
 	}

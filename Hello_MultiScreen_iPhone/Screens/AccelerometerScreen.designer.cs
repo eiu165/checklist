@@ -11,8 +11,23 @@ namespace Hello_MultiScreen_iPhone
 	[Register ("AccelerometerScreen")]
 	partial class AccelerometerScreen
 	{
+		[Outlet]
+		MonoTouch.UIKit.UIButton btnStart { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel lblOutput { get; set; }
+		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnStart != null) {
+				btnStart.Dispose ();
+				btnStart = null;
+			}
+
+			if (lblOutput != null) {
+				lblOutput.Dispose ();
+				lblOutput = null;
+			}
 		}
 	}
 }

@@ -24,10 +24,32 @@ namespace Hello_MultiScreen_iPhone
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+
+
+			UIAccelerometer.SharedAccelerometer.UpdateInterval = 0.05;
 			
-			// Perform any additional setup after loading the view, typically from a nib.
+			UIAccelerometer.SharedAccelerometer.Acceleration += delegate(object sender, UIAccelerometerEventArgs e)
+			{
+				double accelerationX = e.Acceleration.X;
+				double accelerationY = - e.Acceleration.Y;
+				double currentRawReading = Math.Atan2(accelerationY, accelerationX);
+				
+				var angle = RadiansToDegrees(currentRawReading);
+
+				var s = string.Format("x: {0}\n"+
+				                      "y: {1}\n"+
+				                      "angle: {2}\n"+
+				                      "time: {3}\n", accelerationX, accelerationY, angle, DateTime.Now.ToString());
+				lblOutput.Text = angle.ToString();
+			};
+
 		}
 		
+		private double RadiansToDegrees(double radians)
+		{
+			return radians * 180/Math.PI;
+		}
+
 		public override void ViewDidUnload ()
 		{
 			base.ViewDidUnload ();

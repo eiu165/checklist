@@ -22,3 +22,17 @@ Dialog/checklist/bin/iPhoneSimulator/Debug/checklist.exe
 Dialog/checklist/bin/iPhoneSimulator/Debug/checklist.exe.mdb
 
 Dialog/checklist/obj/Debug/monotouch_dll_content_processed
+
+Hello_MultiScreen_iPhone/bin/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.app/HomeScreen.nib
+
+Hello_MultiScreen_iPhone/bin/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.exe
+
+Hello_MultiScreen_iPhone/bin/iPhoneSimulator/Debug/Hello_MultiScreen_iPhone.exe.mdb
+
+.DS_Store
+
+Dialog/.DS_Store
+
+Dialog/MonoTouch.Dialog.userprefs
+
+Hello_MultiScreen_iPhone/.DS_Store

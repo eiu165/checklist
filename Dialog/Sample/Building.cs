@@ -27,18 +27,8 @@ namespace Sample
 		//[Entry (Placeholder = "Enter primary contact name", AutocorrectionType = UITextAutocorrectionType.Yes, AutocapitalizationType = UITextAutocapitalizationType.Words, ClearButtonMode = UITextFieldViewMode.WhileEditing)]
 		[Entry (Placeholder = "Enter primary contact name", AutocapitalizationType = UITextAutocapitalizationType.Words, ClearButtonMode = UITextFieldViewMode.WhileEditing)]
 		public string ContactName;
+		  
 		 
-	[Section ("Enumerations")]
-		
-		[Caption ("Favorite CLR type")]
-		public TypeCode FavoriteType;
-		
-	[Section ("Checkboxes")]
-		[Checkbox]
-		bool English = true;
-		
-		[Checkbox]
-		bool Spanish;
 		
 	[Section ("Image Selection")]
 		public UIImage Top;
@@ -46,13 +36,13 @@ namespace Sample
 		public UIImage Bottom;
 		
 	[Section ("Multiline")]
-		[Caption ("This is a\nmultiline string\nall you need is the\n[Multiline] attribute")]
+		//[Caption ("This is a\nmultiline string\nall you need is the\n[Multiline] attribute")]
 		[Multiline]
 		public string multi;
 		
 	[Section ("IEnumerable")]
 		[RadioSelection ("ListOfString")] 
-		public int selected = 1;
+		public int selected = 0;
 		public IList<string> ListOfString;
 	}
 

@@ -86,6 +86,10 @@
     <Compile Include="Screens\NotifyScreen.designer.cs">
       <DependentUpon>NotifyScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\AccelerometerScreen.cs" />
+    <Compile Include="Screens\AccelerometerScreen.designer.cs">
+      <DependentUpon>AccelerometerScreen.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -99,6 +103,7 @@
     <InterfaceDefinition Include="Screens\HelloUniverseScreen.xib" />
     <InterfaceDefinition Include="Screens\CameraScreen.xib" />
     <InterfaceDefinition Include="Screens\NotifyScreen.xib" />
+    <InterfaceDefinition Include="Screens\AccelerometerScreen.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Icons\29_icon.png" />

@@ -12,7 +12,9 @@ namespace Hello_MultiScreen_iPhone
 		HelloUniverseScreen helloUniverseScreen; 
 		CameraScreen cameraScreen;
 		NotifyScreen notifyScreen;
-		
+		AccelerometerScreen accelerometerScreen;
+
+
 		//loads the HomeScreen.xib file and connects it to this object
 		public HomeScreen () : base ("HomeScreen", null)
 		{
@@ -45,6 +47,13 @@ namespace Hello_MultiScreen_iPhone
 				if(this.notifyScreen == null) { this.notifyScreen = new NotifyScreen(); }
 				this.NavigationController.PushViewController(this.notifyScreen, true);
 			};
+			
+			this.btnAccelerometer.TouchUpInside += (sender, e) => {
+				if(this.accelerometerScreen == null) { this.accelerometerScreen = new AccelerometerScreen(); }
+				this.NavigationController.PushViewController(this.accelerometerScreen, true);
+			};
+			
+
 
 		}
 		
