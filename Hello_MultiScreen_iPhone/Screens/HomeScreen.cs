@@ -7,13 +7,12 @@ using MonoTouch.UIKit;
 namespace Hello_MultiScreen_iPhone
 {
 	public partial class HomeScreen : UIViewController
-	{
-		HelloWorldScreen helloWorldScreen;
-		HelloUniverseScreen helloUniverseScreen; 
+	{ 
 		CameraScreen cameraScreen;
 		NotifyScreen notifyScreen;
 		MailScreen mailScreen;
 		AccelerometerScreen accelerometerScreen;
+		WebServiceScreen webServiceScreen;
 
 
 		//loads the HomeScreen.xib file and connects it to this object
@@ -24,21 +23,7 @@ namespace Hello_MultiScreen_iPhone
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-		
-			//---- when the hello world button is clicked
-			this.btnHelloWorld.TouchUpInside += (sender, e) => {
-				//---- instantiate a new hello world screen, if it's null (it may not be null if they've navigated
-				// backwards from it
-				if(this.helloWorldScreen == null) { this.helloWorldScreen = new HelloWorldScreen(); }
-				//---- push our hello world screen onto the navigation controller and pass a true so it navigates
-				this.NavigationController.PushViewController(this.helloWorldScreen, true);
-			};
-			
-			//---- same thing, but for the hello universe screen
-			this.btnHelloUniverse.TouchUpInside += (sender, e) => {
-				if(this.helloUniverseScreen == null) { this.helloUniverseScreen = new HelloUniverseScreen(); }
-				this.NavigationController.PushViewController(this.helloUniverseScreen, true);
-			};
+		 
  
 			this.btnCamera2.TouchUpInside += (sender, e) => {
 				if(this.cameraScreen == null) { this.cameraScreen = new CameraScreen(); }
@@ -57,7 +42,11 @@ namespace Hello_MultiScreen_iPhone
 				if(this.mailScreen == null) { this.mailScreen = new MailScreen(); }
 				this.NavigationController.PushViewController(this.mailScreen, true);
 			};
-			
+			this.btnWebService.TouchUpInside += (sender, e) => {
+				if(this.webServiceScreen == null) { this.webServiceScreen = new WebServiceScreen(); }
+				this.NavigationController.PushViewController(this.webServiceScreen, true);
+			};
+
 
 
 		}

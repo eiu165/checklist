@@ -28,6 +28,9 @@ namespace Hello_MultiScreen_iPhone
 
 		[Outlet]
 		MonoTouch.UIKit.UIButton btnMail { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton btnWebService { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -59,6 +62,11 @@ namespace Hello_MultiScreen_iPhone
 			if (btnMail != null) {
 				btnMail.Dispose ();
 				btnMail = null;
+			}
+
+			if (btnWebService != null) {
+				btnWebService.Dispose ();
+				btnWebService = null;
 			}
 		}
 	}

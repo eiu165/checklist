@@ -94,6 +94,10 @@
     <Compile Include="Screens\MailScreen.designer.cs">
       <DependentUpon>MailScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\WebServiceScreen.cs" />
+    <Compile Include="Screens\WebServiceScreen.designer.cs">
+      <DependentUpon>WebServiceScreen.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -109,6 +113,7 @@
     <InterfaceDefinition Include="Screens\NotifyScreen.xib" />
     <InterfaceDefinition Include="Screens\AccelerometerScreen.xib" />
     <InterfaceDefinition Include="Screens\MailScreen.xib" />
+    <InterfaceDefinition Include="Screens\WebServiceScreen.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Icons\29_icon.png" />

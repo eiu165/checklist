@@ -25,6 +25,10 @@ namespace Hello_MultiScreen_iPhone
 		{
 			base.ViewDidLoad ();
 
+			var alert = new UIAlertView("Accelerometer demo", 
+			                                   "this one is Not working yet", null, "Okay");
+			alert.Show();
+
 
 			UIAccelerometer.SharedAccelerometer.UpdateInterval = 0.05;
 			
