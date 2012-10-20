@@ -18,10 +18,10 @@ namespace Hello_MultiScreen_iPhone
 		MonoTouch.UIKit.UIButton btnHelloUniverse { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIButton btnCamera { get; set; }
+		MonoTouch.UIKit.UIButton btnCamera2 { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIButton btnCamera2 { get; set; }
+		MonoTouch.UIKit.UIButton btnNotify { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -35,14 +35,14 @@ namespace Hello_MultiScreen_iPhone
 				btnHelloUniverse = null;
 			}
 
-			if (btnCamera != null) {
-				btnCamera.Dispose ();
-				btnCamera = null;
-			}
-
 			if (btnCamera2 != null) {
 				btnCamera2.Dispose ();
 				btnCamera2 = null;
+			}
+
+			if (btnNotify != null) {
+				btnNotify.Dispose ();
+				btnNotify = null;
 			}
 		}
 	}

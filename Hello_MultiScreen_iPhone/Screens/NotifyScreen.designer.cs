@@ -11,8 +11,23 @@ namespace Hello_MultiScreen_iPhone
 	[Register ("NotifyScreen")]
 	partial class NotifyScreen
 	{
+		[Outlet]
+		MonoTouch.UIKit.UIButton btnNotify { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UILabel lblOutput { get; set; }
+		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnNotify != null) {
+				btnNotify.Dispose ();
+				btnNotify = null;
+			}
+
+			if (lblOutput != null) {
+				lblOutput.Dispose ();
+				lblOutput = null;
+			}
 		}
 	}
 }

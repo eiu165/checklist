@@ -33,8 +33,8 @@ namespace Hello_MultiScreen_iPhone
 				this.InvokeOnMainThread(() => {
 					this.imgSnapshot.Image = e.Image;
 				});
-				
-				DismissModalViewControllerAnimated(true);
+				DismissViewController(true,  null);
+				//DismissModalViewControllerAnimated(true);
 			};
 			
 			// Handle media selected.
@@ -52,8 +52,8 @@ namespace Hello_MultiScreen_iPhone
 						this.imgSnapshot.Image = image;
 					});
 				}
-				
-				DismissModalViewControllerAnimated(true);
+				DismissViewController(true,  null);
+				//DismissModalViewControllerAnimated(true);
 			};
 			
 			// Handle cancellation of picker.
@@ -90,7 +90,7 @@ namespace Hello_MultiScreen_iPhone
 						}
 						else
 						{
-							using(var alert = new UIAlertView("Title", "this device has No Camera", null, "OK", null)) 
+							using(var alert = new UIAlertView("Sorry", "this device has No Camera", null, "OK", null)) 
 							{
 									alert.Show();  
 							}
