@@ -11,6 +11,7 @@ namespace Hello_MultiScreen_iPhone
 		HelloWorldScreen helloWorldScreen;
 		HelloUniverseScreen helloUniverseScreen;
 		DemoIosCameraViewController demoIosCameraViewController;
+		CameraScreen cameraScreen;
 		
 		//loads the HomeScreen.xib file and connects it to this object
 		public HomeScreen () : base ("HomeScreen", null)
@@ -36,11 +37,14 @@ namespace Hello_MultiScreen_iPhone
 				this.NavigationController.PushViewController(this.helloUniverseScreen, true);
 			};
 
-			
-			//---- same thing, but for the hello universe screen
+			 
 			this.btnCamera.TouchUpInside += (sender, e) => {
 				if(this.demoIosCameraViewController == null) { this.demoIosCameraViewController = new DemoIosCameraViewController(); }
 				this.NavigationController.PushViewController(this.demoIosCameraViewController, true);
+			}; 
+			this.btnCamera2.TouchUpInside += (sender, e) => {
+				if(this.cameraScreen == null) { this.cameraScreen = new CameraScreen(); }
+				this.NavigationController.PushViewController(this.cameraScreen, true);
 			};
 
 		}

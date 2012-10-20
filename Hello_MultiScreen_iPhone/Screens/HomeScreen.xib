@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">768</int>
 		<string key="IBDocument.SystemVersion">11G63</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2182</string>
+		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
 		<string key="IBDocument.AppKitVersion">1138.51</string>
 		<string key="IBDocument.HIToolboxVersion">569.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">1181</string>
+			<string key="NS.object.0">933</string>
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -106,7 +106,7 @@
 						<string key="NSFrame">{{20, 115}, {280, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
+						<reference key="NSNextKeyView" ref="582833184"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -120,10 +120,32 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="657907795"/>
-						<object class="IBUIFontDescription" key="IBUIFontDescription">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="292658930">
 							<int key="type">2</int>
 							<double key="pointSize">15</double>
 						</object>
+						<reference key="IBUIFont" ref="606535955"/>
+					</object>
+					<object class="IBUIButton" id="582833184">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{20, 168}, {280, 37}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<int key="IBUIButtonType">1</int>
+						<string key="IBUINormalTitle">Camera2</string>
+						<reference key="IBUIHighlightedTitleColor" ref="55636190"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="657907795"/>
+						<reference key="IBUIFontDescription" ref="292658930"/>
 						<reference key="IBUIFont" ref="606535955"/>
 					</object>
 				</object>
@@ -180,6 +202,14 @@
 					</object>
 					<int key="connectionID">13</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">btnCamera2</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="582833184"/>
+					</object>
+					<int key="connectionID">15</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -200,6 +230,7 @@
 							<reference ref="684216477"/>
 							<reference ref="189730715"/>
 							<reference ref="551941974"/>
+							<reference ref="582833184"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -229,6 +260,11 @@
 						<reference key="object" ref="551941974"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">14</int>
+						<reference key="object" ref="582833184"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -241,14 +277,16 @@
 					<string>-2.IBPluginDependency</string>
 					<string>1.IBPluginDependency</string>
 					<string>12.IBPluginDependency</string>
+					<string>14.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 					<string>9.IBPluginDependency</string>
 				</object>
-				<object class="NSArray" key="dict.values">
+				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>HomeScreen</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UIResponder</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -268,7 +306,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">13</int>
+			<int key="maxID">15</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -281,11 +319,13 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>btnCamera</string>
+							<string>btnCamera2</string>
 							<string>btnHelloUniverse</string>
 							<string>btnHelloWorld</string>
 						</object>
-						<object class="NSArray" key="dict.values">
+						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
@@ -296,13 +336,18 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>btnCamera</string>
+							<string>btnCamera2</string>
 							<string>btnHelloUniverse</string>
 							<string>btnHelloWorld</string>
 						</object>
-						<object class="NSArray" key="dict.values">
+						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
 								<string key="name">btnCamera</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">btnCamera2</string>
 								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -330,7 +375,7 @@
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<real value="1296" key="NS.object.0"/>
+			<real value="1280" key="NS.object.0"/>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.InterfaceBuilder3</string>
@@ -338,6 +383,6 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<string key="IBCocoaTouchPluginVersion">1181</string>
+		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
 </archive>

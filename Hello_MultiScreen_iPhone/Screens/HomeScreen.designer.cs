@@ -19,6 +19,9 @@ namespace Hello_MultiScreen_iPhone
 
 		[Outlet]
 		MonoTouch.UIKit.UIButton btnCamera { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton btnCamera2 { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -35,6 +38,11 @@ namespace Hello_MultiScreen_iPhone
 			if (btnCamera != null) {
 				btnCamera.Dispose ();
 				btnCamera = null;
+			}
+
+			if (btnCamera2 != null) {
+				btnCamera2.Dispose ();
+				btnCamera2 = null;
 			}
 		}
 	}

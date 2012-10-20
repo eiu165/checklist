@@ -39,11 +39,11 @@
 	<key>DTPlatformName</key>
 	<string>iphonesimulator</string>
 	<key>DTSDKName</key>
-	<string>iphonesimulator5.1</string>
+	<string>iphonesimulator5.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>5.1</string>
+	<string>5.0</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<string>1</string>

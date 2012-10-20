@@ -80,6 +80,10 @@
     <Compile Include="Screens\HelloUniverseScreen.cs" />
     <Compile Include="Screens\DemoIosCameraViewController.cs" />
     <Compile Include="Screens\DemoIosCameraViewController.designer.cs" />
+    <Compile Include="Screens\CameraScreen.cs" />
+    <Compile Include="Screens\CameraScreen.designer.cs">
+      <DependentUpon>CameraScreen.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -92,6 +96,7 @@
     <InterfaceDefinition Include="Screens\HelloWorldScreen.xib" />
     <InterfaceDefinition Include="Screens\HelloUniverseScreen.xib" />
     <InterfaceDefinition Include="Screens\DemoIosCameraViewController.xib" />
+    <InterfaceDefinition Include="Screens\CameraScreen.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Icons\29_icon.png" />
