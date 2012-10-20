@@ -78,8 +78,6 @@
     <Compile Include="Screens\HomeScreen.cs" />
     <Compile Include="Screens\HelloWorldScreen.cs" />
     <Compile Include="Screens\HelloUniverseScreen.cs" />
-    <Compile Include="Screens\DemoIosCameraViewController.cs" />
-    <Compile Include="Screens\DemoIosCameraViewController.designer.cs" />
     <Compile Include="Screens\CameraScreen.cs" />
     <Compile Include="Screens\CameraScreen.designer.cs">
       <DependentUpon>CameraScreen.cs</DependentUpon>
@@ -95,7 +93,6 @@
     <InterfaceDefinition Include="Screens\HomeScreen.xib" />
     <InterfaceDefinition Include="Screens\HelloWorldScreen.xib" />
     <InterfaceDefinition Include="Screens\HelloUniverseScreen.xib" />
-    <InterfaceDefinition Include="Screens\DemoIosCameraViewController.xib" />
     <InterfaceDefinition Include="Screens\CameraScreen.xib" />
   </ItemGroup>
   <ItemGroup>
