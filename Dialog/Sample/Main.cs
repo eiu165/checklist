@@ -40,6 +40,7 @@ namespace Sample
 					new StringElement ("iPhone Settings Sample", DemoElementApi),
 					new StringElement ("Dynamically load data", DemoDynamic),
 					new StringElement ("Add/Remove demo", DemoAddRemove),
+					new StringElement ("Add/Remove demo2", DemoAddRemove2),
 					new StringElement ("Assorted cells", DemoDate),
 					new StyledStringElement ("Styled Elements", DemoStyled) { BackgroundUri = new Uri ("file://" + p) },
 					new StringElement ("Load More Sample", DemoLoadMore),
