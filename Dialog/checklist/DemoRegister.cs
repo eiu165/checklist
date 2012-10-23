@@ -2,61 +2,64 @@ using System;
 using MonoTouch.Foundation;
 using MonoTouch.Dialog;
 using System.Collections.Generic;
+using MonoTouch.UIKit;
 
-namespace checklist
+namespace Sample
 {
-	public class DemoRegister
-	{
 
+
+	
+	
+	[Preserve (AllMembers=true)]
+	public class Register {
+		[Section]
+		public bool AccountEnabled;
+		[Skip] public bool Hidden;
 		
-		[Preserve (AllMembers=true)]
-		class Register {
-			[Section]
-			public bool AccountEnabled;
-			[Skip] public bool Hidden;
-			
-			[Section ("Info", "Your Info")]
-			
-			[Entry ("Enter your first name")]
-			public string FirstName;
-			
-			[Entry ("Enter your last name")]
-			public string LastName;
-			
-			[Section ("Autocapitalize, autocorrect and clear button")]
-			
-			[Entry (Placeholder = "Enter your name", AutocorrectionType = UITextAutocorrectionType.Yes, AutocapitalizationType = UITextAutocapitalizationType.Words, ClearButtonMode = UITextFieldViewMode.WhileEditing)]
-			public string Name;
+		[Section ("Info", "Your Info")]
+		
+		[Entry ("Enter your first name")]
+		public string FirstName;
+		
+		[Entry ("Enter your last name")]
+		public string LastName;
 
 
-			[Section ("Enumerations")]
-			
-			[Caption ("Favorite CLR type")]
-			public TypeCode FavoriteType;
-			
-			[Section ("Checkboxes")]
-			[Checkbox]
-			bool English = true;
-			
-			[Checkbox]
-			bool Spanish;
-
-
-			[Section ("Multiline")]
-			[Caption ("This is a\nmultiline string\nall you need is the\n[Multiline] attribute")]
-			[Multiline]
-			public string multi;
-			
-			[Section ("IEnumerable")]
-			[RadioSelection ("ListOfString")] 
-			public int selected = 1;
-			public IList<string> ListOfString;
-		}
+	}
+	
+	
 
 
 
-		public DemoRegister ()
+	public partial class AppDelegate
+	{ 
+		Register register;
+		 
+		public  void  DemoRegister ()
 		{
+			if (register == null) {
+				register = new Register();
+			}
+			var bc = new BindingContext (null, register, "Register");
+
+			
+			var dv = new DialogViewController (bc.Root, true);
+
+
+
+			// When the view goes out of screen, we fetch the data.
+			dv.ViewDisappearing += delegate {
+				// This reflects the data back to the object instance
+				bc.Fetch ();
+				
+				// Manly way of dumping the data.
+				Console.WriteLine ("Current status:");
+				Console.WriteLine (
+					"fname:           {0}\n" +
+					"lname:           {1}\n", 
+					register.FirstName, register.LastName);
+			};
+			navigation.PushViewController (dv, true);
 		}
 	}
 }

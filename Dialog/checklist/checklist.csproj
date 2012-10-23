@@ -90,6 +90,8 @@
     <Compile Include="DemoCameraApi.cs" />
     <Compile Include="DemoAddRemove.cs" />
     <Compile Include="UI\Camera.cs" />
+    <Compile Include="DemoRegister.cs" />
+    <Compile Include="DemoReflectionApi.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

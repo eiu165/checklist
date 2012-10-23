@@ -38,7 +38,9 @@ namespace Sample
 			var menu = new RootElement ("Demos"){
 				new Section ("Element API"){
 					new StringElement ("iPhone Settings Sample", DemoElementApi),
-					new StringElement ("Add Remove", DemoAddRemove),
+					new StringElement ("Add Remove", DemoAddRemove), 
+					new StringElement ("Register", DemoRegister),
+					new StringElement ("Reflection", DemoReflectionApi),
 					new StringElement ("Camera Sample", DemoCameraApi),
 				},
 			};
