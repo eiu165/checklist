@@ -11,6 +11,7 @@ namespace iPhone
 	{
 		public CameraScreen () : base ("CameraScreen", null)
 		{
+			this.Title = "Camera";
 		}
 		
 		public override void DidReceiveMemoryWarning ()

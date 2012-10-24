@@ -12,6 +12,7 @@ namespace iPhone
 	{
 		public MailScreen () : base ("MailScreen", null)
 		{
+			this.Title = "Mail";
 		}
 		
 		public override void DidReceiveMemoryWarning ()

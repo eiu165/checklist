@@ -11,6 +11,7 @@ namespace iPhone
 	{
 		public NotifyScreen () : base ("NotifyScreen", null)
 		{
+			this.Title = "Notify";
 		}
 		
 		public override void DidReceiveMemoryWarning ()

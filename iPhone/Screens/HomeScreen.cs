@@ -14,17 +14,12 @@ namespace iPhone
 		MailScreen mailScreen;
 		AccelerometerScreen accelerometerScreen;
 		WebServiceScreen webServiceScreen;
-		 
-
-		//[Outlet]
-		//MonoTouch.UIKit.UIButton btnCamera2 { get; set; }
-
-		UIWindow window;
-		UINavigationController navigation  ;	
+		  
 
 		//loads the HomeScreen.xib file and connects it to this object
 		public HomeScreen () : base ("HomeScreen", null)
 		{	
+			this.Title = "Home";
 		}
 		
 		public override void ViewDidLoad ()
@@ -61,18 +56,20 @@ namespace iPhone
 				}; 
 				var dv = new DialogViewController (menu) {
 					Autorotate = true
-				};  
-				navigation = new UINavigationController (); 
-				navigation.PushViewController (dv, true);	  
+				}; 
+ 
+				this.NavigationController.PushViewController (dv, true);	  
 				// On iOS5 we use the new window.RootViewController, on older versions, we add the subview
-				window = new UIWindow (UIScreen.MainScreen.Bounds);
-				window.MakeKeyAndVisible ();
-				if (UIDevice.CurrentDevice.CheckSystemVersion (5, 0)){
-					window.RootViewController = navigation;	
-				}
-				else{
-					window.AddSubview (navigation.View);
-				}
+//				window = new UIWindow (UIScreen.MainScreen.Bounds);
+//				window.MakeKeyAndVisible ();
+//				if (UIDevice.CurrentDevice.CheckSystemVersion (5, 0)){
+//					window.RootViewController = navigation;	
+//				}
+//				else{
+//					window.AddSubview (navigation.View);
+//				}
+
+
 			};
 		} 
 		public void DemoElementApi ()
@@ -80,7 +77,7 @@ namespace iPhone
 			var root = CreateRoot ();
 			
 			var dv = new DialogViewController (root, true);
-			navigation.PushViewController (dv, true);				
+			this.NavigationController.PushViewController (dv, true);				
 		}
 		
 		RootElement CreateRoot ()

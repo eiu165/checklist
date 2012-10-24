@@ -11,6 +11,7 @@ namespace iPhone
 	{
 		public AccelerometerScreen () : base ("AccelerometerScreen", null)
 		{
+			this.Title = "Accelerometer";
 		}
 		
 		public override void DidReceiveMemoryWarning ()
