@@ -17,17 +17,17 @@ namespace iPhone
 		// This method is invoked when the application has loaded its UI and it is ready to run
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			this.window = new UIWindow (UIScreen.MainScreen.Bounds);
+			this.window = new UIWindow (UIScreen.MainScreen.Bounds); 
+			tabBarController = new UITabBarController ();  
+			var root = CreateRoot ();
+			var dv = new DialogViewController (root, true);
 
- 
-			
-			tabBarController = new UITabBarController ();
-			
+
 			tabBarController.ViewControllers = new UIViewController [] {
 				new UINavigationController(new HelloUniverseScreen()) { TabBarItem = new UITabBarItem("hello", UIImage.FromBundle("Images/home.png"),0)},
-				new UINavigationController(new HomeScreen()), 
+				new UINavigationController(dv) { TabBarItem = new UITabBarItem("setting", UIImage.FromBundle("Images/home.png"),0)}, 
 				new UINavigationController(new CameraScreen()), 
-				new UINavigationController(new MailScreen()), 
+				new UINavigationController(new HomeScreen()), 
 			};  
 			this.window.RootViewController = tabBarController;
 			
@@ -36,6 +36,26 @@ namespace iPhone
 			
 			return true;
 		}
+		
+		RootElement CreateRoot ()
+		{
+			return new RootElement ("Settings") {
+				new Section (){
+					new BooleanElement ("Airplane Mode", false),
+					new RootElement ("Notifications", 0, 0) {
+						new Section (null, "Turn off Notifications to disable Sounds\n" +
+						             "Alerts and Home Screen Badges for the\napplications below."){
+							new BooleanElement ("Notifications", false)
+						}
+					}
+				}, 
+				new Section () {
+					new HtmlElement ("About", "http://monotouch.net"),
+					new MultilineElement ("Remember to eat\nfruits and vegetables\nevery day")
+				}
+			};		
+		}
+
 
 	}
 }
