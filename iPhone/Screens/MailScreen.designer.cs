@@ -6,7 +6,7 @@
 //
 using MonoTouch.Foundation;
 
-namespace Hello_MultiScreen_iPhone
+namespace iPhone
 {
 	[Register ("MailScreen")]
 	partial class MailScreen

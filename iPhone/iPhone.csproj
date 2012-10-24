@@ -99,12 +99,14 @@
     <Compile Include="Screens\WebServiceScreen.designer.cs">
       <DependentUpon>WebServiceScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\Locale.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Screens\" />
     <Folder Include="Images\" />
     <Folder Include="Images\Icons\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Screens\HomeScreen.xib" />
@@ -126,6 +128,11 @@
     <Content Include="Images\Icons\512_icon.png" />
     <Content Include="Default.png" />
     <Content Include="Default%402x.png" />
+    <Content Include="Images\fav.png" />
+    <Content Include="Images\friends.png" />
+    <Content Include="Images\home.png" />
+    <Content Include="Images\lupa.png" />
+    <Content Include="Images\messages.png" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>

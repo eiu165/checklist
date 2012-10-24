@@ -6,7 +6,7 @@
 //
 using MonoTouch.Foundation;
 
-namespace Hello_MultiScreen_iPhone
+namespace iPhone
 {
 	[Register ("HomeScreen")]
 	partial class HomeScreen
@@ -31,6 +31,9 @@ namespace Hello_MultiScreen_iPhone
 
 		[Outlet]
 		MonoTouch.UIKit.UIButton btnWebService { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UIButton btnSettings { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -67,6 +70,11 @@ namespace Hello_MultiScreen_iPhone
 			if (btnWebService != null) {
 				btnWebService.Dispose ();
 				btnWebService = null;
+			}
+
+			if (btnSettings != null) {
+				btnSettings.Dispose ();
+				btnSettings = null;
 			}
 		}
 	}

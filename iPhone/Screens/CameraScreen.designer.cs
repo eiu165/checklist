@@ -6,7 +6,7 @@
 //
 using MonoTouch.Foundation;
 
-namespace Hello_MultiScreen_iPhone
+namespace iPhone
 {
 	[Register ("CameraScreen")]
 	partial class CameraScreen

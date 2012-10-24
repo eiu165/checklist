@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using MonoTouch.Dialog;
 
-namespace Hello_MultiScreen_iPhone
+namespace iPhone
 {
 	public partial class HomeScreen : UIViewController
 	{ 
@@ -13,11 +14,17 @@ namespace Hello_MultiScreen_iPhone
 		MailScreen mailScreen;
 		AccelerometerScreen accelerometerScreen;
 		WebServiceScreen webServiceScreen;
+		 
 
+		//[Outlet]
+		//MonoTouch.UIKit.UIButton btnCamera2 { get; set; }
+
+		UIWindow window;
+		UINavigationController navigation  ;	
 
 		//loads the HomeScreen.xib file and connects it to this object
 		public HomeScreen () : base ("HomeScreen", null)
-		{
+		{	
 		}
 		
 		public override void ViewDidLoad ()
@@ -44,7 +51,57 @@ namespace Hello_MultiScreen_iPhone
 				if(this.webServiceScreen == null) { this.webServiceScreen = new WebServiceScreen(); }
 				this.NavigationController.PushViewController(this.webServiceScreen, true);
 			};
+			this.btnSettings.TouchUpInside += (sender, e) => { 
+				var menu = new RootElement ("Demos"){
+					new Section ("Element API"){ 
+						new StringElement ("aaa", DemoElementApi),
+						new StringElement ("bbb", DemoElementApi),
+						new StringElement ("ccc", DemoElementApi),
+					},
+				}; 
+				var dv = new DialogViewController (menu) {
+					Autorotate = true
+				};  
+				navigation = new UINavigationController (); 
+				navigation.PushViewController (dv, true);	  
+				// On iOS5 we use the new window.RootViewController, on older versions, we add the subview
+				window = new UIWindow (UIScreen.MainScreen.Bounds);
+				window.MakeKeyAndVisible ();
+				if (UIDevice.CurrentDevice.CheckSystemVersion (5, 0)){
+					window.RootViewController = navigation;	
+				}
+				else{
+					window.AddSubview (navigation.View);
+				}
+			};
+		} 
+		public void DemoElementApi ()
+		{
+			var root = CreateRoot ();
+			
+			var dv = new DialogViewController (root, true);
+			navigation.PushViewController (dv, true);				
 		}
+		
+		RootElement CreateRoot ()
+		{
+			return new RootElement ("Settings") {
+				new Section (){
+					new BooleanElement ("Airplane Mode", false),
+					new RootElement ("Notifications", 0, 0) {
+						new Section (null, "Turn off Notifications to disable Sounds\n" +
+						             "Alerts and Home Screen Badges for the\napplications below."){
+							new BooleanElement ("Notifications", false)
+						}
+					}
+				}, 
+				new Section () {
+					new HtmlElement ("About", "http://monotouch.net"),
+					new MultilineElement ("Remember to eat\nfruits and vegetables\nevery day")
+				}
+			};		
+		}
+
 		
 		/// <summary>
 		/// Is called when the view is about to appear on the screen. We use this method to hide the 

@@ -5,7 +5,7 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace Hello_MultiScreen_iPhone
+namespace iPhone
 {
 	public partial class AccelerometerScreen : UIViewController
 	{

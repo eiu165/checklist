@@ -4,7 +4,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace Hello_MultiScreen_iPhone
+namespace iPhone
 {
 	public partial class HelloWorldScreen : UIViewController
 	{

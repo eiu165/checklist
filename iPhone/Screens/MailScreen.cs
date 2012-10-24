@@ -6,7 +6,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.MessageUI;
 
-namespace Hello_MultiScreen_iPhone
+namespace iPhone
 {
 	public partial class MailScreen : UIViewController
 	{
