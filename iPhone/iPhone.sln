@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iPhone", "iPhone.csproj", "{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "..\Sample\Sample.csproj", "{F6AEFFC5-4807-49A3-83C5-661E655CB59A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -19,8 +21,16 @@ Global
 		{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}.Release|iPhone.Build.0 = Release|iPhone
 		{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{F6AEFFC5-4807-49A3-83C5-661E655CB59A}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{F6AEFFC5-4807-49A3-83C5-661E655CB59A}.Debug|iPhone.Build.0 = Debug|iPhone
+		{F6AEFFC5-4807-49A3-83C5-661E655CB59A}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{F6AEFFC5-4807-49A3-83C5-661E655CB59A}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{F6AEFFC5-4807-49A3-83C5-661E655CB59A}.Release|iPhone.ActiveCfg = Release|iPhone
+		{F6AEFFC5-4807-49A3-83C5-661E655CB59A}.Release|iPhone.Build.0 = Release|iPhone
+		{F6AEFFC5-4807-49A3-83C5-661E655CB59A}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{F6AEFFC5-4807-49A3-83C5-661E655CB59A}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = iPhone.csproj
+		StartupItem = ..\Sample\Sample.csproj
 	EndGlobalSection
 EndGlobal
