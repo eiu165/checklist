@@ -26,6 +26,7 @@ namespace iPhone
 		{
 			base.ViewDidLoad ();
 		  
+//			this.NavigationController.HidesBottomBarWhenPushed = true;
 			this.btnCamera2.TouchUpInside += (sender, e) => {
 				if(this.cameraScreen == null) { this.cameraScreen = new CameraScreen(); }
 				this.NavigationController.PushViewController(this.cameraScreen, true);

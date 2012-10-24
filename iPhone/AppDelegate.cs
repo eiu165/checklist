@@ -24,7 +24,7 @@ namespace iPhone
 			tabBarController = new UITabBarController ();
 			
 			tabBarController.ViewControllers = new UIViewController [] {
-				new UINavigationController(new HelloUniverseScreen()),
+				new UINavigationController(new HelloUniverseScreen()) { TabBarItem = new UITabBarItem("hello", UIImage.FromBundle("Images/home.png"),0)},
 				new UINavigationController(new HomeScreen()), 
 				new UINavigationController(new CameraScreen()), 
 				new UINavigationController(new MailScreen()), 
