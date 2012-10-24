@@ -71,6 +71,7 @@ namespace iPhone
 				
 				// Action sheet navigation handling.
 				actionSheet.Clicked += (actionSender, actionEvent) => {
+					Console.WriteLine("dismiss  buttonIndex: " + actionEvent.ButtonIndex);
 					switch (actionEvent.ButtonIndex)
 					{
 					case 0:
@@ -82,7 +83,8 @@ namespace iPhone
 						
 					case 1:
 						// Camera.
-						bool isAvailable = UIImagePickerController.IsCameraDeviceAvailable (UIImagePickerControllerCameraDevice.Front);
+						bool isAvailable = UIImagePickerController.IsCameraDeviceAvailable (UIImagePickerControllerCameraDevice.Rear) 
+							|| UIImagePickerController.IsCameraDeviceAvailable (UIImagePickerControllerCameraDevice.Front)   ;
 						if (isAvailable)
 						{
 							imagePicker.SourceType = UIImagePickerControllerSourceType.Camera;
@@ -96,12 +98,8 @@ namespace iPhone
 									alert.Show();  
 							}
 						}
-						break;
-					case 2:
-						Console.WriteLine("dismiss?");
-						break;
+						break; 
 					default:
-						// Cancel.
 						break;
 					}
 				};

@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iPhone", "iPhone.csproj", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "..\Sample\Sample.csproj", "{F6AEFFC5-4807-49A3-83C5-661E655CB59A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win", "Win\Win.csproj", "{3790E367-5D00-48A8-8951-26767CB7A376}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -17,18 +15,6 @@ Global
 		AppStore|iPhone = AppStore|iPhone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3790E367-5D00-48A8-8951-26767CB7A376}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
-		{3790E367-5D00-48A8-8951-26767CB7A376}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
-		{3790E367-5D00-48A8-8951-26767CB7A376}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
-		{3790E367-5D00-48A8-8951-26767CB7A376}.AppStore|iPhone.Build.0 = AppStore|iPhone
-		{3790E367-5D00-48A8-8951-26767CB7A376}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{3790E367-5D00-48A8-8951-26767CB7A376}.Debug|iPhone.Build.0 = Debug|iPhone
-		{3790E367-5D00-48A8-8951-26767CB7A376}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
-		{3790E367-5D00-48A8-8951-26767CB7A376}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{3790E367-5D00-48A8-8951-26767CB7A376}.Release|iPhone.ActiveCfg = Release|iPhone
-		{3790E367-5D00-48A8-8951-26767CB7A376}.Release|iPhone.Build.0 = Release|iPhone
-		{3790E367-5D00-48A8-8951-26767CB7A376}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{3790E367-5D00-48A8-8951-26767CB7A376}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}.Debug|iPhone.Build.0 = Debug|iPhone
 		{A10944A3-80E8-4A8D-A6F5-1A10606AAE60}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
