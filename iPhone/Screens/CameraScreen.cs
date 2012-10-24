@@ -77,7 +77,7 @@ namespace iPhone
 						// Photo library.
 						imagePicker.SourceType = UIImagePickerControllerSourceType.PhotoLibrary;
 						imagePicker.AllowsEditing = false;
-						this.PresentModalViewController(imagePicker, true);
+						this.PresentViewController(imagePicker, true, null);
 						break;
 						
 					case 1:
@@ -87,7 +87,7 @@ namespace iPhone
 						{
 							imagePicker.SourceType = UIImagePickerControllerSourceType.Camera;
 							imagePicker.AllowsEditing = false;
-							this.PresentModalViewController(imagePicker, true);
+							this.PresentViewController(imagePicker, true, null);
 						}
 						else
 						{
@@ -97,7 +97,9 @@ namespace iPhone
 							}
 						}
 						break;
-						
+					case 2:
+						Console.WriteLine("dismiss?");
+						break;
 					default:
 						// Cancel.
 						break;
