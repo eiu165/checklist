@@ -66,9 +66,9 @@ namespace iPhone
 			this.btnTakePicture.TouchUpInside += (sender, e) => {
 				// Create an action sheet.
 				var actionSheet = new UIActionSheet("Image Source") { "Photo Library", "Camera", "Cancel" };
-				actionSheet.Style = UIActionSheetStyle.Automatic;
-				actionSheet.ShowInView(View);
-				
+				actionSheet.Style = UIActionSheetStyle.BlackTranslucent;
+				//actionSheet.ShowInView(this.View );
+				actionSheet.ShowFromTabBar(this.TabBarController.TabBar);
 				// Action sheet navigation handling.
 				actionSheet.Clicked += (actionSender, actionEvent) => {
 					Console.WriteLine("dismiss  buttonIndex: " + actionEvent.ButtonIndex);
