@@ -42,6 +42,27 @@ namespace iPhone
 			};
 
 
+			this.btnPost.TouchUpInside += (sender, e) => {
+				string name = this.tbPostName.Text; 
+				/*
+				ASCIIEncoding encoding=new ASCIIEncoding();
+				string postData="name="+name;
+				//postData += ("&username="+strName);
+				byte[]  data = encoding.GetBytes(postData);
+				
+				// Prepare web request...
+				HttpWebRequest myRequest =
+					(HttpWebRequest)WebRequest.Create("http://localhost/MyIdentity/Default.aspx");
+				myRequest.Method = "POST";
+				myRequest.ContentType="application/x-www-form-urlencoded";
+				myRequest.ContentLength = data.Length;
+				Stream newStream=myRequest.GetRequestStream();
+				// Send the data.
+				newStream.Write(data,0,data.Length);
+				newStream.Close();
+*/
+			}
+
 		}
 		
 		public override void ViewDidUnload ()
