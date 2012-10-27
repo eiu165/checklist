@@ -18,6 +18,12 @@ namespace iPhone
 		MonoTouch.UIKit.UIButton btnPost { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UITextField tbGet { get; set; }
+
+		[Outlet]
+		MonoTouch.UIKit.UITextField tbPostName { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIButton btnPut { get; set; }
 
 		[Outlet]
@@ -39,6 +45,16 @@ namespace iPhone
 			if (btnPost != null) {
 				btnPost.Dispose ();
 				btnPost = null;
+			}
+
+			if (tbGet != null) {
+				tbGet.Dispose ();
+				tbGet = null;
+			}
+
+			if (tbPostName != null) {
+				tbPostName.Dispose ();
+				tbPostName = null;
 			}
 
 			if (btnPut != null) {

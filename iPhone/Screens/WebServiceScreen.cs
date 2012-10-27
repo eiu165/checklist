@@ -31,16 +31,14 @@ namespace iPhone
 			this.btnGet.TouchUpInside += (sender, e) => {
 
 				JsonObject j;
-				Uri address = new Uri("http://webapi.apphb.com/api/instructors/1");
-				HttpWebRequest httpReq = (HttpWebRequest)HttpWebRequest.Create (address);
+				var address = String.Format("http://webapi.apphb.com/api/instructors/{0}", this.tbGet.Text); 
+				HttpWebRequest httpReq = (HttpWebRequest)HttpWebRequest.Create (new Uri(address));
 				using (HttpWebResponse httpRes = (HttpWebResponse)httpReq.GetResponse ()) {
 					Stream s = httpRes.GetResponseStream ();
 
 					j = (JsonObject)JsonObject.Load (s);
 				}
-
-				var alert = new UIAlertView("test",  j.ToString(), null, "Okay");
-				alert.Show();
+				this.lblGet.Text = string.Format("{0}  {1}", j.ToString(), DateTime.Now.ToString("HH:mm:ss"));
 			};
 
 
