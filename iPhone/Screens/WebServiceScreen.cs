@@ -4,6 +4,8 @@ using System.Drawing;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using System.Net;
+using System.IO;
 
 namespace iPhone
 {
@@ -24,10 +26,20 @@ namespace iPhone
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
-			//var alert = new UIAlertView("Accelerometer demo",  "this one is Not working yet", null, "Okay");
-			//alert.Show();
+ 
+			this.btnGet.TouchUpInside += (sender, e) => {
+				/*
+				JsonObject j;
+				Uri address = new Uri("http://webapi.apphb.com/api/instructors");
+				HttpWebRequest httpReq = (HttpWebRequest)HttpWebRequest.Create (address);
+				using (HttpWebResponse httpRes = (HttpWebResponse)httpReq.GetResponse ()) {
+					Stream s = httpRes.GetResponseStream ();
+					j = (JsonObject)JsonObject.Load (s);
+				}*/
 
+				var alert = new UIAlertView("test",  "test", null, "Okay");
+				alert.Show();
+			};
 
 
 		}
