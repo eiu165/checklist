@@ -6,6 +6,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using System.Net;
 using System.IO;
+using System.Json;
 
 namespace iPhone
 {
@@ -28,16 +29,17 @@ namespace iPhone
 			base.ViewDidLoad ();
  
 			this.btnGet.TouchUpInside += (sender, e) => {
-				/*
+
 				JsonObject j;
-				Uri address = new Uri("http://webapi.apphb.com/api/instructors");
+				Uri address = new Uri("http://webapi.apphb.com/api/instructors/1");
 				HttpWebRequest httpReq = (HttpWebRequest)HttpWebRequest.Create (address);
 				using (HttpWebResponse httpRes = (HttpWebResponse)httpReq.GetResponse ()) {
 					Stream s = httpRes.GetResponseStream ();
-					j = (JsonObject)JsonObject.Load (s);
-				}*/
 
-				var alert = new UIAlertView("test",  "test", null, "Okay");
+					j = (JsonObject)JsonObject.Load (s);
+				}
+
+				var alert = new UIAlertView("test",  j.ToString(), null, "Okay");
 				alert.Show();
 			};
 
