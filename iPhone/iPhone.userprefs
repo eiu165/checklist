@@ -1,40 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Screens/HomeScreen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Screens/WebServiceScreen.cs">
     <Files>
-      <File FileName="AppDelegate.cs" Line="25" Column="47" />
-      <File FileName="Main.cs" Line="10" Column="3" />
-      <File FileName="Screens/HomeScreen.cs" Line="31" Column="38" />
-      <File FileName="Screens/HelloUniverseScreen.cs" Line="7" Column="35" />
-      <File FileName="Screens/CameraScreen.cs" Line="94" Column="7" />
-      <File FileName="../Sample/DemoReflectionApi.cs" Line="1" Column="1" />
-      <File FileName="../Sample/Main.cs" Line="24" Column="19" />
-      <File FileName="../Sample/DemoElementApi.cs" Line="18" Column="11" />
-      <File FileName="Screens/HomeScreen.designer.cs" Line="19" Column="1" />
+      <File FileName="Screens/WebServiceScreen.cs" Line="24" Column="22" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="iPhone" expanded="True">
-            <Node name="Screens" expanded="True">
-              <Node name="HelloWorldScreen.cs" expanded="True" />
-              <Node name="HomeScreen.cs" expanded="True" selected="True" />
-            </Node>
-          </Node>
-          <Node name="Sample" expanded="True" />
-        </State>
-      </Pad>
-      <Pad Id="ClassPad">
-        <State expanded="True" selected="True" />
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/nmacellaio/Projects/checklist/iPhone/Screens/HomeScreen.cs" line="81" />
-      <Breakpoint file="/Users/nmacellaio/Projects/checklist/iPhone/Screens/HomeScreen.cs" line="84" />
-      <Breakpoint file="/Users/nmacellaio/Projects/checklist/iPhone/Screens/HomeScreen.cs" line="90" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
