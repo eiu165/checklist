@@ -34,6 +34,7 @@ namespace iPhone
 				return true;
 			};
 
+
 			this.btnGet.TouchUpInside += (sender, e) => {
 
 				JsonObject j;
@@ -46,8 +47,7 @@ namespace iPhone
 				}
 				this.lblGet.Text = string.Format("{0}  {1}", j.ToString(), DateTime.Now.ToString("HH:mm:ss"));
 			};
-
-
+ 
 			this.btnPost.TouchUpInside += (sender, e) => {
 				string name = this.tbPostName.Text; 
 				/*
@@ -68,8 +68,17 @@ namespace iPhone
 				newStream.Close();
 */
 			};
+ 
+
+			UILabel newLabel = new UILabel(new Rectangle(200,10,100,30));
+			newLabel.Text = "test test test";
+			newLabel.BackgroundColor = UIColor.Brown;
+			View.AddSubview(newLabel);
 		}
-		
+
+
+
+
 		public override void ViewDidUnload ()
 		{
 			base.ViewDidUnload ();
