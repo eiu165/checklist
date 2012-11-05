@@ -28,6 +28,12 @@ namespace iPhone
 		{
 			base.ViewDidLoad ();
  
+			this.tbGet.ShouldReturn = (s) =>
+			{
+				this.tbGet.ResignFirstResponder();
+				return true;
+			};
+
 			this.btnGet.TouchUpInside += (sender, e) => {
 
 				JsonObject j;
@@ -61,8 +67,7 @@ namespace iPhone
 				newStream.Write(data,0,data.Length);
 				newStream.Close();
 */
-			}
-
+			};
 		}
 		
 		public override void ViewDidUnload ()
