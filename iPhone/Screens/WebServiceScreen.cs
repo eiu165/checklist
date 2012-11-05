@@ -70,10 +70,10 @@ namespace iPhone
 			};
  
 
-			UILabel newLabel = new UILabel(new Rectangle(200,10,100,30));
+			/*UILabel newLabel = new UILabel(new Rectangle(200,10,100,30));
 			newLabel.Text = "test test test";
 			newLabel.BackgroundColor = UIColor.Brown;
-			View.AddSubview(newLabel);
+			View.AddSubview(newLabel);*/
 		}
 
 

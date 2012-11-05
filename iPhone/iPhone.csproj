@@ -108,6 +108,7 @@
     <Folder Include="Images\" />
     <Folder Include="Images\Icons\" />
     <Folder Include="Utilities\" />
+    <Folder Include="Settings.bundle\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Screens\HomeScreen.xib" />
@@ -134,6 +135,9 @@
     <Content Include="Images\home.png" />
     <Content Include="Images\lupa.png" />
     <Content Include="Images\messages.png" />
+    <Content Include="Settings.bundle\Root.plist">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
