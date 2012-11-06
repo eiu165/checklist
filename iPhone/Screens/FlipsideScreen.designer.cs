@@ -17,8 +17,8 @@ namespace iPhone
 		[Outlet]
 		MonoTouch.UIKit.UIButton btnSet { get; set; }
 
-		[Action ("done:")] 
-		partial void done (MonoTouch.UIKit.UIBarButtonItem sender);
+		[Action ("done:")]
+		partial void done (MonoTouch.Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{

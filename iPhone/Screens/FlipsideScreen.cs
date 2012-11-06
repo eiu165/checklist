@@ -21,7 +21,7 @@ namespace iPhone
 			// Release any cached data, images, etc that aren't in use.
 		}
 		
-		partial void done (UIBarButtonItem sender)
+		partial void done (MonoTouch.Foundation.NSObject sender) 
 		{
 			NSUserDefaults.StandardUserDefaults.SetString(this.tbSet.Text , "goal");
 
