@@ -47,12 +47,12 @@ namespace iPhone
 		{
 			base.ViewDidLoad ();
  
-			//this.tbGet.KeyboardType = UIKeyboardType.NumberPad;
+
 			this.tbGet.SetKeyboardEditorWithCloseButton(UIKeyboardType.NumberPad, "close");
 
-			this.tbGet.ShouldReturn = (s) =>
+			this.tbPostName.ShouldReturn = (s) =>
 			{
-				this.tbGet.ResignFirstResponder();
+				this.tbPostName.ResignFirstResponder();
 				return true;
 			};
 

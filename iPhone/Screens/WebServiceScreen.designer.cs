@@ -12,6 +12,9 @@ namespace iPhone
 	partial class WebServiceScreen
 	{
 		[Outlet]
+		MonoTouch.UIKit.UITextField tbPut { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIButton btnGet { get; set; }
 
 		[Outlet]
@@ -37,6 +40,11 @@ namespace iPhone
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (tbPut != null) {
+				tbPut.Dispose ();
+				tbPut = null;
+			}
+
 			if (btnGet != null) {
 				btnGet.Dispose ();
 				btnGet = null;

@@ -14,6 +14,7 @@ namespace iPhone
 		MailScreen mailScreen;
 		AccelerometerScreen accelerometerScreen;
 		WebServiceScreen webServiceScreen;
+		SettingsScreen settingsScreen;
 		  
 
 		//loads the HomeScreen.xib file and connects it to this object
@@ -48,7 +49,9 @@ namespace iPhone
 				this.NavigationController.PushViewController(this.webServiceScreen, true);
 			};
 			this.btnSettings.TouchUpInside += (sender, e) => {  
-
+				
+				if(this.settingsScreen == null) { this.settingsScreen = new SettingsScreen(); }
+				this.NavigationController.PushViewController(this.settingsScreen, true);
 			};
 		}  
 

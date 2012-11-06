@@ -101,6 +101,10 @@
       <DependentUpon>WebServiceScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\Locale.cs" />
+    <Compile Include="Screens\SettingsScreen.cs" />
+    <Compile Include="Screens\SettingsScreen.designer.cs">
+      <DependentUpon>SettingsScreen.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -119,6 +123,7 @@
     <InterfaceDefinition Include="Screens\AccelerometerScreen.xib" />
     <InterfaceDefinition Include="Screens\MailScreen.xib" />
     <InterfaceDefinition Include="Screens\WebServiceScreen.xib" />
+    <InterfaceDefinition Include="Screens\SettingsScreen.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Icons\29_icon.png" />

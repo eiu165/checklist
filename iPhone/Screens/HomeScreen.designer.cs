@@ -12,6 +12,9 @@ namespace iPhone
 	partial class HomeScreen
 	{
 		[Outlet]
+		MonoTouch.UIKit.UIButton btnDIalog { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UIButton btnHelloWorld { get; set; }
 
 		[Outlet]
@@ -37,6 +40,11 @@ namespace iPhone
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnDIalog != null) {
+				btnDIalog.Dispose ();
+				btnDIalog = null;
+			}
+
 			if (btnHelloWorld != null) {
 				btnHelloWorld.Dispose ();
 				btnHelloWorld = null;
