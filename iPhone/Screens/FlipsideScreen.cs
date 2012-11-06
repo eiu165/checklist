@@ -21,12 +21,14 @@ namespace iPhone
 			// Release any cached data, images, etc that aren't in use.
 		}
 		
-		partial void Done (NSObject sender)
+		partial void done (UIBarButtonItem sender)
 		{
-			if (done != null)
-				done (this, EventArgs.Empty);
+			NSUserDefaults.StandardUserDefaults.SetString(this.tbSet.Text , "goal");
+
+			if (Done != null)
+				Done (this, EventArgs.Empty);
 		}
-		public event EventHandler done;
+		public event EventHandler Done;
 
 		public override void ViewDidLoad ()
 		{
@@ -35,6 +37,10 @@ namespace iPhone
 			UILabel newLabel = new UILabel(new RectangleF(10,150,100,100));
 			newLabel.Text = "hello dynmaic control";
 			View.AddSubview(newLabel);
+
+			this.tbSet.Text = NSUserDefaults.StandardUserDefaults.StringForKey("goal");
+
+
 		}
 		
 		public override void ViewDidUnload ()

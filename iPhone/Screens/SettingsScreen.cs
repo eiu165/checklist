@@ -36,7 +36,7 @@ namespace iPhone
 				var controller = new FlipsideScreen () {
 					ModalTransitionStyle = UIModalTransitionStyle.FlipHorizontal,
 				};
-				controller.done += delegate {
+				controller.Done += delegate {
 					DismissModalViewControllerAnimated (true);
 				};
 				
