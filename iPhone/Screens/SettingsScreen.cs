@@ -32,15 +32,13 @@ namespace iPhone
 			base.ViewDidAppear (animated);
 			this.lblGoal.Text = NSUserDefaults.StandardUserDefaults.StringForKey("goal") + " grams"; 
  
-			this.btnInfo.TouchUpInside += (sender, e) => {
-				
+			this.btnInfo.TouchUpInside += (sender, e) => { 
 				var controller = new FlipsideScreen () {
 					ModalTransitionStyle = UIModalTransitionStyle.FlipHorizontal,
 				};
-				
-				//controller.Done += delegate {
-				//	DismissModalViewControllerAnimated (true);
-				//};
+				controller.done += delegate {
+					DismissModalViewControllerAnimated (true);
+				};
 				
 				PresentModalViewController (controller, true);
 			};

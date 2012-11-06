@@ -21,11 +21,12 @@ namespace iPhone
 			// Release any cached data, images, etc that aren't in use.
 		}
 		
-		//partial void done (UIBarButtonItem sender)
-		//{
-		//	if (Done != null)
-		//		Done (this, EventArgs.Empty);
-		//}
+		partial void Done (NSObject sender)
+		{
+			if (done != null)
+				done (this, EventArgs.Empty);
+		}
+		public event EventHandler done;
 
 		public override void ViewDidLoad ()
 		{
