@@ -10,6 +10,25 @@ using System.Json;
 
 namespace iPhone
 {
+	public static class ExtensionMethods
+	{
+		public static void SetKeyboardEditorWithCloseButton (this UITextField txt, UIKeyboardType     keyboardType, string closeButtonText = "Done")
+		{
+			UIToolbar toolbar = new UIToolbar ();
+			txt.KeyboardType = keyboardType;
+			toolbar.BarStyle = UIBarStyle.Black;
+			toolbar.Translucent = true;
+			toolbar.SizeToFit ();
+			UIBarButtonItem doneButton = new UIBarButtonItem (closeButtonText, UIBarButtonItemStyle.Done,
+			                                                  (s, e) => {
+				txt.ResignFirstResponder ();
+			});
+			toolbar.SetItems (new UIBarButtonItem[]{doneButton}, true);
+			
+			txt.InputAccessoryView = toolbar;
+		}
+	}
+
 	public partial class WebServiceScreen : UIViewController
 	{
 		public WebServiceScreen () : base ("WebServiceScreen", null)
@@ -28,6 +47,9 @@ namespace iPhone
 		{
 			base.ViewDidLoad ();
  
+			//this.tbGet.KeyboardType = UIKeyboardType.NumberPad;
+			this.tbGet.SetKeyboardEditorWithCloseButton(UIKeyboardType.NumberPad, "close");
+
 			this.tbGet.ShouldReturn = (s) =>
 			{
 				this.tbGet.ResignFirstResponder();
