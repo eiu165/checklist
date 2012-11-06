@@ -12,10 +12,18 @@ namespace iPhone
 	partial class SettingsScreen
 	{
 		[Outlet]
+		MonoTouch.UIKit.UIButton btnInfo { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UILabel lblGoal { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnInfo != null) {
+				btnInfo.Dispose ();
+				btnInfo = null;
+			}
+
 			if (lblGoal != null) {
 				lblGoal.Dispose ();
 				lblGoal = null;

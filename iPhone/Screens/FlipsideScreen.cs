@@ -7,9 +7,9 @@ using MonoTouch.UIKit;
 
 namespace iPhone
 {
-	public partial class SettingsScreen : UIViewController
+	public partial class FlipsideScreen : UIViewController
 	{
-		public SettingsScreen () : base ("SettingsScreen", null)
+		public FlipsideScreen () : base ("FlipsideScreen", null)
 		{
 		}
 		
@@ -21,32 +21,21 @@ namespace iPhone
 			// Release any cached data, images, etc that aren't in use.
 		}
 		
+		//partial void done (UIBarButtonItem sender)
+		//{
+		//	if (Done != null)
+		//		Done (this, EventArgs.Empty);
+		//}
+
 		public override void ViewDidLoad ()
 		{
-			base.ViewDidLoad (); 
+			base.ViewDidLoad ();
 
+			UILabel newLabel = new UILabel(new RectangleF(10,150,100,100));
+			newLabel.Text = "hello dynmaic control";
+			View.AddSubview(newLabel);
 		}
-
-		public override void ViewDidAppear (bool animated)
-		{
-			base.ViewDidAppear (animated);
-			this.lblGoal.Text = NSUserDefaults.StandardUserDefaults.StringForKey("goal") + " grams"; 
- 
-			this.btnInfo.TouchUpInside += (sender, e) => {
-				
-				var controller = new FlipsideScreen () {
-					ModalTransitionStyle = UIModalTransitionStyle.FlipHorizontal,
-				};
-				
-				//controller.Done += delegate {
-				//	DismissModalViewControllerAnimated (true);
-				//};
-				
-				PresentModalViewController (controller, true);
-			};
-		}
-
-
+		
 		public override void ViewDidUnload ()
 		{
 			base.ViewDidUnload ();
@@ -56,7 +45,7 @@ namespace iPhone
 			//
 			// e.g. myOutlet.Dispose (); myOutlet = null;
 			
-			//ReleaseDesignerOutlets ();
+			ReleaseDesignerOutlets ();
 		}
 		
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
@@ -64,7 +53,6 @@ namespace iPhone
 			// Return true for supported orientations
 			return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
 		}
-		 
 	}
 }
 

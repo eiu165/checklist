@@ -105,6 +105,10 @@
     <Compile Include="Screens\SettingsScreen.designer.cs">
       <DependentUpon>SettingsScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\FlipsideScreen.cs" />
+    <Compile Include="Screens\FlipsideScreen.designer.cs">
+      <DependentUpon>FlipsideScreen.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -124,6 +128,7 @@
     <InterfaceDefinition Include="Screens\MailScreen.xib" />
     <InterfaceDefinition Include="Screens\WebServiceScreen.xib" />
     <InterfaceDefinition Include="Screens\SettingsScreen.xib" />
+    <InterfaceDefinition Include="Screens\FlipsideScreen.xib" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Icons\29_icon.png" />
