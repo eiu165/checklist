@@ -1,12 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Screens/WebServiceScreen.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Ad-Hoc|iPhone" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Screens/SettingsScreen.cs">
     <Files>
-      <File FileName="Screens/WebServiceScreen.cs" Line="24" Column="22" />
+      <File FileName="Screens/WebServiceScreen.cs" Line="17" Column="9" />
+      <File FileName="Screens/FlipsideScreen.cs" Line="28" Column="8" />
+      <File FileName="Screens/MailScreen.cs" Line="13" Column="20" />
+      <File FileName="Main.cs" Line="13" Column="17" />
+      <File FileName="AppDelegate.cs" Line="34" Column="142" />
+      <File FileName="Screens/SettingsScreen.cs" Line="22" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/nmacellaio/Projects/checklist/iPhone/Screens/SettingsScreen.cs" line="36" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

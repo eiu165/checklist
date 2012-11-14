@@ -33,14 +33,16 @@ namespace iPhone
 			this.lblGoal.Text = NSUserDefaults.StandardUserDefaults.StringForKey("goal") + " grams"; 
  
 			this.btnInfo.TouchUpInside += (sender, e) => { 
+				Console.WriteLine("about to run click of btnInfo " );
 				var controller = new FlipsideScreen () {
 					ModalTransitionStyle = UIModalTransitionStyle.FlipHorizontal,
 				};
+				Console.WriteLine("controller is " + controller.ToString());
 				controller.Done += delegate {
-					DismissModalViewControllerAnimated (true);
+					DismissModalViewControllerAnimated(true);
 				};
 				
-				PresentModalViewController (controller, true);
+				PresentModalViewController(controller, true);
 			};
 		}
 

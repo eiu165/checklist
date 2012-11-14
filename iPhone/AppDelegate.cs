@@ -23,15 +23,15 @@ namespace iPhone
 
 			this.window = new UIWindow (UIScreen.MainScreen.Bounds); 
 			tabBarController = new UITabBarController ();  
-			var root = CreateRoot ();
+			var root = MonotouchDialog.CreateRoot ();
 			var dv = new DialogViewController (root, true);
 
 
 			tabBarController.ViewControllers = new UIViewController [] {
-				new UINavigationController(new HelloUniverseScreen()) { TabBarItem = new UITabBarItem("hello", UIImage.FromBundle("Images/home.png"),0)},
+				new UINavigationController(new HomeScreen()), 
 				new UINavigationController(dv) { TabBarItem = new UITabBarItem("setting", UIImage.FromBundle("Images/home.png"),0)}, 
 				new UINavigationController(new CameraScreen()), 
-				new UINavigationController(new HomeScreen()), 
+				new UINavigationController(new HelloUniverseScreen()) { TabBarItem = new UITabBarItem("hello", UIImage.FromBundle("Images/home.png"),0)},
 			};  
 			this.window.RootViewController = tabBarController;
 			
@@ -67,25 +67,7 @@ namespace iPhone
 			NSUserDefaults.StandardUserDefaults.RegisterDefaults(defaultsToRegister);
 		}
 
-		
-		RootElement CreateRoot ()
-		{
-			return new RootElement ("Settings") {
-				new Section (){
-					new BooleanElement ("Airplane Mode", false),
-					new RootElement ("Notifications", 0, 0) {
-						new Section (null, "Turn off Notifications to disable Sounds\n" +
-						             "Alerts and Home Screen Badges for the\napplications below."){
-							new BooleanElement ("Notifications", false)
-						}
-					}
-				}, 
-				new Section () {
-					new HtmlElement ("About", "http://monotouch.net"),
-					new MultilineElement ("Remember to eat\nfruits and vegetables\nevery day")
-				}
-			};		
-		}
+
 
 
 	}

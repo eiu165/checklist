@@ -34,7 +34,7 @@ namespace iPhone
 		{
 			base.ViewDidLoad ();
 
-			UILabel newLabel = new UILabel(new RectangleF(10,150,100,100));
+			UILabel newLabel = new UILabel(new RectangleF(10,200,200,100));
 			newLabel.Text = "hello dynmaic control";
 			View.AddSubview(newLabel);
 
