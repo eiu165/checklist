@@ -109,6 +109,7 @@
     <Compile Include="Screens\FlipsideScreen.designer.cs">
       <DependentUpon>FlipsideScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingDialog.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

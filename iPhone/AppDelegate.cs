@@ -5,6 +5,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.Dialog;
 using System.IO;
+using Hello_MultiScreen_iPhone;
 
 
 namespace iPhone
@@ -23,7 +24,7 @@ namespace iPhone
 
 			this.window = new UIWindow (UIScreen.MainScreen.Bounds); 
 			tabBarController = new UITabBarController ();  
-			var root = CreateRoot ();
+			var root = SettingDialog.CreateRoot ();
 			var dv = new DialogViewController (root, true);
 
 
@@ -67,25 +68,7 @@ namespace iPhone
 			NSUserDefaults.StandardUserDefaults.RegisterDefaults(defaultsToRegister);
 		}
 
-		
-		RootElement CreateRoot ()
-		{
-			return new RootElement ("Settings") {
-				new Section (){
-					new BooleanElement ("Airplane Mode", false),
-					new RootElement ("Notifications", 0, 0) {
-						new Section (null, "Turn off Notifications to disable Sounds\n" +
-						             "Alerts and Home Screen Badges for the\napplications below."){
-							new BooleanElement ("Notifications", false)
-						}
-					}
-				}, 
-				new Section () {
-					new HtmlElement ("About", "http://monotouch.net"),
-					new MultilineElement ("Remember to eat\nfruits and vegetables\nevery day")
-				}
-			};		
-		}
+
 
 
 	}

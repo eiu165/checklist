@@ -28,7 +28,7 @@ namespace iPhone
 
 			var alert = new UIAlertView("Accelerometer demo",  "this one is Not working yet", null, "Okay");
 			alert.Show();
-
+			lblOutput.Text = "aaaaaaaa";
 
 			UIAccelerometer.SharedAccelerometer.UpdateInterval = 0.05;
 			
@@ -44,7 +44,7 @@ namespace iPhone
 				                      "y: {1}\n"+
 				                      "angle: {2}\n"+
 				                      "time: {3}\n", accelerationX, accelerationY, angle, DateTime.Now.ToString());
-				lblOutput.Text = angle.ToString();
+				lblOutput.Text = s.ToString();
 			};
 
 		}
